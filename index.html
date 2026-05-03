@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Image Prediction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <div class="card">
+            <h1>Weather Classifier</h1>
+            <p class="subtitle">Upload an image to predict weather condition</p>
+            <div class="upload-zone" id="uploadZone">
+                <div class="upload-icon">🌤</div>
+                <p>Click to select an image</p>
+                <span>PNG, JPG supported</span>
+            </div>
+            <input type="file" id="imageInput" accept="image/*">
+            <img id="preview" class="preview-img" style="display:none;">
+            <button class="predict-btn" id="predictBtn">Predict Weather</button>
+            <div class="loader" id="loader"></div>
+            <div class="result-box" id="resultBox">
+                <div class="result-label">Prediction</div>
+                <div class="result-value" id="resultText">—</div>
+                <div class="time-grid">
+                    <div class="time-card">
+                        <div class="tl">Serial Time</div>
+                        <div class="tv" id="serialTime">—</div>
+                    </div>
+                    <div class="time-card">
+                        <div class="tl">Parallel Time</div>
+                        <div class="tv" id="parallelTime">—</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
