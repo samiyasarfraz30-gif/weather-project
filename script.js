@@ -44,15 +44,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
 let selectedFile = null;
 
 document.getElementById('uploadZone').addEventListener('click', function() {
@@ -83,7 +74,7 @@ document.getElementById('predictBtn').addEventListener('click', function() {
     let formData = new FormData();
     formData.append('file', selectedFile);
 
-    fetch('http://127.0.0.1:5000/predict', { method: 'POST', body: formData })
+    fetch('https://weather-project-3-5otj.onrender.com', { method: 'POST', body: formData })
         .then(res => res.json())
         .then(data => {
             document.getElementById('loader').style.display = 'none';
@@ -104,3 +95,12 @@ document.getElementById('predictBtn').addEventListener('click', function() {
             console.error('ERROR:', err);
         });
 });
+
+
+
+
+
+
+
+
+
